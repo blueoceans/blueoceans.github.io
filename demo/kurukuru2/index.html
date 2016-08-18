@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-controller='Ctrl' ng-init='c={}' ng-model='c'>
+<style>[ng-cloak] {display: none;}</style>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+<meta charset='utf-8'>
+<meta content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0' name='viewport'>
+<title>[[c.title]]</title>
+<link href='/l/bootstrap-3.1.0/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+<link href='./style.css' rel='stylesheet' type='text/css'>
+<script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+<script src='//ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js'></script>
+<script src='./js/esprima.js'></script>
+<script src='./js/js-yaml.min.js'></script>
+<script src='./js/three.min.js'></script>
+<script src='./js/tween.min.js'></script>
+<script src='./js/TrackballControls.js'></script>
+<script src='./js/CSS3DRenderer.js'></script>
+<script src='./js/reflection.js'></script>
+<script src='./js/demo.js'></script>
+<style>[[c.style]]</style>
+<body>
+<h1 id='header' ng-cloak>[[c.header.text || "&nbsp;"]]</h1>
+<div id='container'>
+<div style='overflow: hidden; -webkit-transform-style: preserve-3d; width: 1364px; height: 626px; position: absolute; -webkit-perspective: 859.9604322892968px;'>
+<div style='-webkit-transform-style: preserve-3d; width: 1364px; height: 626px; -webkit-transform: translate3d(0px, 0px, 859.9604322892968px) matrix3d(0.899338960647583, -0.002436612034216523, 0.4372454285621643, 0, -0.0026837559416890144, -0.9999963641166687, -0.000052595332817872986, 0, -0.4372439980506897, 0.001126158982515335, 0.8993422389030457, 0, -0.00008424405677942559, 0, -3000, 1) translate3d(682px, 313px, 0px);'></div>
+</div>
+</div>
+<div id='menu' ng-init='mouseup = true'>
+<button ng-mousedown="mouseup = false; rotate_next('left')" ng-mouseup='mouseup = true'>
+<span class='glyphicon glyphicon-arrow-left'></span>
+</button>
+<button ng-mousedown="mouseup = false; rotate_next('right')" ng-mouseup='mouseup = true'>
+<span class='glyphicon glyphicon-arrow-right'></span>
+</button>
+<button ng-mousedown='mouseup = false; up()' ng-mouseup='mouseup = true'>
+<span class='glyphicon glyphicon-arrow-up'></span>
+</button>
+<button ng-mousedown='mouseup = false; down()' ng-mouseup='mouseup = true'>
+<span class='glyphicon glyphicon-arrow-down'></span>
+</button>
+<button ng-mousedown='mouseup = false; zoom(c.controller.zoomin)' ng-mouseup='mouseup = true'>
+<span class='glyphicon glyphicon-plus'></span>
+</button>
+<button ng-mousedown='mouseup = false; zoom(c.controller.zoomout)' ng-mouseup='mouseup = true'>
+<span class='glyphicon glyphicon-minus'></span>
+</button>
+<button id='reset' ng-click='mouseup = true; reset()'>リセット</button>
+</div>
+<div id='elements' ng-hide='true'>
+<img id='mask-img' ng-src='[[ c.mask ]]'>
+<div class='element' ng-repeat='item in c.item' ng-src='[[ item[0] ]]'>
+<img class='element-img' data-nth='[[ $index ]]' ng-hide='hide' ng-init='hide=true' ng-mouseleave='hide=true' ng-src='[[ item[0] ]]'>
+<div class='element-div' data-nth='[[ $index ]]' ng-mouseenter='hide=false' ng-show='hide'>
+<canvas class='element-canvas rheight40 ropacity20' ng-class='{reflect: c.object.reflect != null}'></canvas>
+</div>
+</div>
+</div>

@@ -1,0 +1,83 @@
+title: 2014年 スマートフォン冬モデルラインナップ #HTML title header
+header: #ヘッダー
+  ## 画像を表示するには、h2#headerのbackground-image属性で割り当て、textをnullに設定します。
+  ## text: null
+  text: 2014年 スマートフォン冬モデルラインナップ
+item: #アイテムのリスト 正面から右回りに配置します
+##- #サンプル
+##  - ./img/lgl23_set.jpg #アイテム画像
+##  - ./d/lgl23.html      #リンク先URLパス
+- #G flex
+  - ./img/lgl23_set.jpg
+  - ./d/lgl23.html
+- #xperia z ultra
+  - ./img/sol24_set.jpg
+  - ./d/sol24.html
+- #aquos phone serie mini
+  - ./img/shl24_set.jpg
+  - ./d/shl24.html
+- #urbano
+  - ./img/l02_set.jpg
+  - ./d/l02.html
+- #arrows ef
+  - ./img/fjl21_set.jpg
+  - ./d/fjl21.html
+- #arrows z
+  - ./img/fjl22_set.jpg
+  - ./d/fjl22.html
+- #htc j one
+  - ./img/htl22_set.jpg
+  - ./d/htl22.html
+- #RAZR
+  - ./img/is12m_set.jpg
+  - ./d/is12m.html
+- #digno s
+  - ./img/kyl21_set_1310.jpg
+  - ./d/kyl21.html
+- #digno m
+  - ./img/kyl22_set.jpg
+  - ./d/kyl22.html
+- #urbano
+  - ./img/l01_set.jpg
+  - ./d/l01.html
+- #isai
+  - ./img/lgl22_set.jpg
+  - ./d/lgl22.html
+- #galaxy note 3
+  - ./img/scl22_set.jpg
+  - ./d/scl22.html
+- #aquos phone serie
+  - ./img/shl22_set.jpg
+  - ./d/shl22.html
+- #aquos phone serie
+  - ./img/shl23_set.jpg
+  - ./d/shl23.html
+- #xperia vl
+  - ./img/sol21_set.jpg
+  - ./d/sol21.html
+- #xperia ul
+  - ./img/sol22_set.jpg
+  - ./d/sol22.html
+- #xperia z1
+  - ./img/sol23_set.jpg
+  - ./d/sol23.html
+object:
+  width: 172 #画像のサイズ幅(単位px)
+  height: 199 #画像のサイズ高さ(単位px)
+  reflect: 130 #反射位置
+  space: 0 #object配置間隔
+  variability: #初期配置のばらつき
+    x: 1.7
+    y: 0.5
+    z: 1.7
+camera: #カメラの初期設定
+  distance: 500 #objectとカメラとの間隔
+  height: 0 #カメラの高さ (y) #0または画像のサイズ高さ(単位px)の-1/2が目安です
+controller:
+  zoomin: 0.8   #ズームイン倍率
+  zoomout: 1.25 #ズームアウト倍率
+mask: ./img/mask.png #マスク用画像
+efect:
+  time: 600 #アニメーション効果の時間
+controls:
+  rotateSpeed: 0.05 #ドラッグに対する変化のスピード

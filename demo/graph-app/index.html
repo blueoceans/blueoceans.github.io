@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<meta charset='UTF-8'>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+<title>モックアップアプリ</title>
+<style>
+  .ng-show {
+    display: block !important;
+  }
+  [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide {
+    display: none !important;
+  }
+  body {
+    padding-top: 100px;
+  }
+</style>
+<link href='/static/img/apple-touch-icon.png' rel='apple-touch-icon-precomposed'>
+<link href='/l/ionic-v1.0.0-beta.6/css/ionic.min.css' rel='stylesheet'>
+<script src='/l/ionic-v1.0.0-beta.6/js/ionic.bundle.min.js'></script>
+<script src='js/app.js'></script>
+<body app ng-app='starter'>
+<ion-side-menus>
+<ion-side-menu side='right'>
+<header class='bar bar-header bar-stable'>
+<p>
+スライダーを変更して更新ボタンを押します。
+</p>
+</header>
+<ion-content class='has-header'>
+<ion-list id='tableData'>
+<ion-item class='range range-positive'>
+<input max='200' min='0' name='v_2001' type='range' value='50'>
+</ion-item>
+<ion-item class='range range-positive'>
+<input max='200' min='0' name='v_2002' type='range' value='80'>
+</ion-item>
+<ion-item class='range range-positive'>
+<input max='200' min='0' name='v_2003' type='range' value='120'>
+</ion-item>
+<ion-item class='range range-positive'>
+<input max='200' min='0' name='v_2004' type='range' value='90'>
+</ion-item>
+<ion-item class='range range-positive'>
+<input max='200' min='0' name='v_2005' type='range' value='150'>
+</ion-item>
+<ion-item class='range range-positive'>
+<input max='200' min='0' name='v_2006' type='range' value='200'>
+</ion-item>
+<ion-item menu-close nav-clear>
+<button class='button button-block button-positive' onClick='window.start()'>
+更新
+</button>
+</ion-item>
+</ion-list>
+</ion-content>
+</ion-side-menu>
+<ion-side-menu-content>
+<ion-header-bar class='bar-positive'>
+<h1 class='title'>モックアップアプリ</h1>
+<div class='buttons right-buttons'>
+<button class='button button-icon icon ion-ios7-cog' menu-toggle='right'></button>
+</div>
+</ion-header-bar>
+<ion-content has-header='true'>
+<ion-refresher></ion-refresher>
+<canvas height='500' id='bar' style='border: 1px solid #CCC;' width='300'></canvas>
+</ion-content>
+</ion-side-menu-content>
+</ion-side-menus>
